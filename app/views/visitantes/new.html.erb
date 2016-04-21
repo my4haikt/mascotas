@@ -1,0 +1,12 @@
+<h1>New Visitante</h1>
+
+<%= render 'form' %>
+
+<h3>P&aacute;gina    principal</h3>    
+@visitante es una variable de instancia    
+<p>Bienvenido a la página de: <%=    @visitante.nombre    %>.</p>    
+<p>Yo nací el:<%=    @visitante.fechacumple    %>.</p>    
+<p>y me quedan unicamente <%=    @visitante.conteo    %>    d&iacute;as para mi cumplea&ntilde;os!</p>
+
+<%= link_to 'Back', visitantes_path %>
+

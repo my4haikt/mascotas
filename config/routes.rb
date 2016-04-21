@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :visitantes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +54,18 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  #Agregado
+  #root to: redirect('/acercade.html') #coloca el Acercade como la pagina de inicio en lugar del index
+  # get '/visitantes/:id', to:'visitantes#view', as:'visitante' #ruta individual
+  # resources :articulos
+  # resources :chttp://localhost:3000/visitantesategorias, :only=>[:new, :create]
+  #resources :usuarios do
+    #resources :articulos
+  #end
+  #namespace :administrador do
+    #resource :articulos
+    #get 'usuarios/new', 'usuario/new'
+  #end
+  root to: 'visitantes#index'
 end
