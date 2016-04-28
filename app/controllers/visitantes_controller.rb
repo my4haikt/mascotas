@@ -16,7 +16,11 @@ class VisitantesController < ApplicationController
   def new
     Rails.logger.debug "Debug:entrando al metodo new"
     @visitante = Visitante.new
-    Rails.logger.debug "Debug: Nombre del usuario"+ @visitante.Nombre
+    Rails.logger.debug "Debug: Nombre del usuario"+ @visitante.nombre
+    flash[:notice]= 'Bienvenido'
+    flash[:alert]='Mi cumpleaños esta cerca.'
+    flash[:warnning]='CUIDADO PELIGRO'
+    flash[:success]='Funcionaaaa'
   end
 
   # GET /visitantes/1/edit
@@ -33,7 +37,7 @@ class VisitantesController < ApplicationController
         format.html { redirect_to @visitante, notice: 'Visitante was successfully created.' }
         format.json { render :show, status: :created, location: @visitante }
       else
-        format.html { render :new }
+        format.html { render :new } #Carga de nuevo el formulario, sin pasar por new
         format.json { render json: @visitante.errors, status: :unprocessable_entity }
       end
     end
