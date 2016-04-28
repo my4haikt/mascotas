@@ -30,7 +30,7 @@ gem 'figaro'
 gem 'gibbon'
 gem 'google_drive'
 gem 'high_voltage'
-gem 'simple_form', group: :doc
+gem 'simple_form'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
